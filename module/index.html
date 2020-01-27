@@ -1,18 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Module Design pattern</title>
-    <script src="js/moduleOne.js"></script>
-    <script src="js/moduleTwo.js"></script>
-    <script src="js/main.js"></script>
+    <meta charset="utf-8" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <h1>Module design pattern</h1>
+    <div id="main">
+        <h1>Register</h1>
+        <form id="registerForm" action="/submit" method="post">
+            <!-- First name -->
+            <div class="wrapper">
+                <label for="firstName">First name: </label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" />
+                <p>
+                    First name can only have letters and length of name has to be
+                    greater than 3
+                </p>
+            </div>
+
+            <!-- Last name -->
+            <div class="wrapper">
+                <label for="lastName">Last name: </label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" />
+                <p>
+                    Last name can only have letters and length of name has to be greater
+                    than 3
+                </p>
+            </div>
+
+            <!-- Email -->
+            <div class="wrapper">
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="Enter email" />
+                <p>Email must be a valid address, e.g. me@mydomain.com</p>
+            </div>
+
+            <!-- Password -->
+            <div class="wrapper">
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" placeholder="Enter password" />
+                <p>
+                    Password must contain an uppercase character, a lower case
+                    character, a number, a special character and length must be greater
+                    than 8 characters
+                </p>
+            </div>
+
+            <!-- Repeat password -->
+            <div class="wrapper">
+                <label for="repeatPassword">Repeat password: </label>
+                <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Enter password again" />
+                <p>Repeat password must be the same as password</p>
+            </div>
+
+            <div class="wrapper">
+                <button type="submit" name="submitButton">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script -->
+    <!-- Example module -->
+    <script src="js/moduleOne.js" charset="utf-8"></script>
+
+    <!-- Binding module -->
+    <script src="js/bind.js" charset="utf-8"></script>
+
+    <!-- Validate module -->
+    <script src="js/validate.js" charset="utf-8"></script>
+
+    <!-- Main module -->
+    <script src="js/main.js" charset="utf-8"></script>
 </body>
 
 </html>
