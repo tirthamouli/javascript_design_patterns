@@ -19,7 +19,7 @@
         Animal.apply(this, [name])
         this.color = color
     }
-    Cat.prototype = Object.create(Animal.prototype)
+    Cat.prototype = Object.create(Animal.prototype) // This is the what inherits
     Cat.prototype.speak = function () {
         console.log(this.name, "says meow")
     }
